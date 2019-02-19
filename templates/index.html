@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Flask App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- ReactJS CDN -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Client file -->
+  <script src="{{ url_for('static',filename='javascripts/javascript.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/style.css') }}">
+  <!-- ReactDOM -->
+  <script src="{{ url_for('static',filename='pageEditor/ckeditor.js') }}"></script>
+  <script type="text/babel" src="{{ url_for('static',filename='api/menu.js') }}"></script>
+  <script type="text/babel" src="{{ url_for('static',filename='api/lastestPost.js') }}"></script>
+  <script type="text/babel" src="{{ url_for('static',filename='api/pageEditor.js') }}"></script>
+  <script type="text/babel" src="{{ url_for('static',filename='api/toggleContentLayout.js') }}"></script>
+
+</head>
+
+<body class="bg-light">
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark d-flex justify-content-between">
+
+    <a class="navbar-brand" href="/"><img src="{{ url_for('static',filename='images/logo.png') }}" style="width:40px;height:40px" />quMall</a>
+
+    <form class="form-inline" action="/search">
+      <input type="text" style="width:480px" class="form-control search ml-5" placeholder="Search...">
+    </form>
+
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#" class="btn btn-primary" data-toggle="popover" data-content="<a href='#'>Action</a><br/>
+          <a href='#'>Action B</a>"
+          data-placement="bottom">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+
+      <li class="nav-item" id="notification">
+        <a href="#" class="btn btn-primary" data-toggle="popover" data-content="<a href='#'>Actionsdsadfasdfsdfsdfsdgsdfgsdfgdfg</a><br/>
+          <a href='#'>Action B</a>"
+          data-placement="bottom">
+          <i class="fa fa-bell-o"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-address-card-o"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Content Page -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="d-none d-xl-block col-xl-3">
+        <!-- Application menu -->
+        <div class="shadow border content-slide bg-white border rounded">
+          <button class="btn btn-menu btn-primary m-3 ml-4">Science</button>
+          <button class="btn btn-menu btn-primary m-3 ml-4">Technology</button>
+          <button class="btn btn-menu btn-primary m-3 ml-4">Engineering</button>
+          <button class="btn btn-menu btn-primary m-3 ml-4">Mall</button>
+        </div>
+      </div>
+      <div class="col-md-8 col-xl-6" id="data">
+        <div class="shadow-lg bg-white content-slide border rounded">
+          <div id='test_post'></div>
+
+        </div>
+      </div>
+      <div class="col-md-4 col-xl-3">
+        <div class="bg-white p-3 content-slide border rounded" id="news_of_friend">
+          News Of Your Friend
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Test App -->
+  <div id='root'></div>
+  <div id='test_edit'></div>
+
+  <!-- Script Footer -->
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover({ html: true });
+    });
+  </script>
+</body>
+
+</html>
