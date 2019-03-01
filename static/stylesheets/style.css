@@ -14,6 +14,33 @@
   width:50%;
   height:480px;
 }
-.search{
-  width:50%
+@media only screen and (min-device-width: 1128px){	
+	.background-homepage {
+	  background: blue;
+		width:70%;
+	}
+	.sign-up-form{
+		width:30%;
+	}
+}
+@media only screen and (max-device-width:1024px) and (min-device-width:768px){
+	.background-homepage {
+	  background: blue;
+		width:60%;
+	}
+	.sign-up-form{
+		width:40%;
+	}
+	.search-input{
+		width: 500px
+	}
+}
+
+@media only screen and(max-device-width: 480px){
+	.sign-up-form{
+	  width:100%
+	}
+	.search-input{
+		width: 368px
+	}
 }
