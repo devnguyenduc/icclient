@@ -14,33 +14,49 @@
   width:50%;
   height:480px;
 }
-@media only screen and (min-device-width: 1128px){	
-	.background-homepage {
-	  background: blue;
-		width:70%;
-	}
+
+@media only screen and(max-width: 480px){
 	.sign-up-form{
-		width:30%;
+	  width:100%
+	}
+	.search-input{
+		width: 368px
 	}
 }
-@media only screen and (max-device-width:1024px) and (min-device-width:768px){
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation : portrait){
 	.background-homepage {
-	  background: blue;
+	  	background: white;
 		width:60%;
 	}
 	.sign-up-form{
-		width:40%;
+		width:35%;
 	}
 	.search-input{
 		width: 500px
 	}
 }
 
-@media only screen and(max-device-width: 480px){
-	.sign-up-form{
-	  width:100%
+@media only screen and (min-width: 1224px){	
+	.background-homepage {
+	  	background: white;
+		width:60%;
 	}
-	.search-input{
-		width: 368px
+	.sign-up-form{
+		background: white;
+		width:30%;
+	}
+}
+
+@media only screen 
+and (min-width : 1824px) {
+	.background-homepage{
+	  	background: white;
+		width:60%;
+	}
+	.sign-up-form{
+		background: white;
+		width:27%;
 	}
 }
