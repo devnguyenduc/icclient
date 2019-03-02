@@ -13,20 +13,39 @@
   height:480px;
 }
 
-@media only screen and (min-width: 320px) and(max-width: 480px){
+.background-homepage {
+  	background: white;
+	width:60%;
+}
+.sign-up-form{
+	width:35%;
+}
+.search-input{
+	margin-right:200px;
+	width: 400px;
+}
+.feature-group{
+	margin-left: 450px;
+}
+
+@media (max-width: 480px){
 	.background-homepage{
 		display: none;
 	}
 	.sign-up-form{
-	  width : 100%;
+	  	width : 100%;
 	}
 	.search-input{
-		width: 226px;
+		width: 320px;
+		margin-right: 10px;
+	}
+	.feature-group{
+		margin-left:75px;
 	}
 }
 
 
-@media only screen and (min-width:768px) and (max-width:1024px) and (orientation : portrait){
+@media (min-width:768px){
 	.background-homepage {
 	  	background: white;
 		width:60%;
@@ -35,11 +54,15 @@
 		width:35%;
 	}
 	.search-input{
-		width: 400px
+		width: 400px;
+		margin-right:100px;
+	}
+	.feature-group{
+		margin-left: 250px;
 	}
 }
 
-@media only screen and (min-width: 1224px){	
+@media (min-width: 1048px){	
 	.background-homepage {
 	  	background: white;
 		width:60%;
@@ -48,9 +71,8 @@
 		background: white;
 		width:30%;
 	}
-
-	.search-input{
-		width: 400px
+	.feature-group{
+		margin-left: 450px;
 	}
 }
 
@@ -63,10 +85,6 @@ and (min-width : 1824px) {
 	.sign-up-form{
 		background: white;
 		width:27%;
-	}
-	
-	.search-input{
-		width: 400px
 	}
 	
 }
